@@ -1,9 +1,10 @@
 ---
-  title: Testing on Supervisors for Docker Daemons
+  title: Simple Solutions for Monitoring Docker Containers
   categories: Docker
   tags:
     - docker
     - supervisor
+    - monitoring
 ---
 
 
@@ -69,8 +70,7 @@ In the container, we want to catch :
 
 ![Memory Metrics](/uploads/0001-1.png)
 
-# Solutions
-
+# Simple Solutions
 
 ## The Original Docker
 
@@ -106,5 +106,3 @@ The report graphic is already there.
 ### Pros and Cons
 
 Simple and fast, but not poorly personalized, restricted in Linux machine.
-
-## Combine cAdvisor with Influxdb + grafana
