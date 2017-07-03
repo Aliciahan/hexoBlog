@@ -8,18 +8,19 @@
 ---
 
 
-# Introduction
+# 1. Introduction
 
 Our but is to supervise the functionality of the native machine running docker daemon, to prevent the insufficient system sources distributed.
 
-## The Aims
+## 1.1 The Aims
 
 - Reduce down time
-- Extensibility, control the quality
-- Ressources monitoring
+- Extensibility
+- Control the Performance
+- Ressources Monitoring
 - Catch exceptions
 
-## The Challenges Monitoring Docker
+## 1.2 The Challenges Monitoring Docker
 
 - It looked like a host machine, but not exactly the same.
 - A LOT OF informations
@@ -29,30 +30,45 @@ Our but is to supervise the functionality of the native machine running docker d
 - Clustering
 - VM Host + Services + Containers + Apps Multi-layers
 
-## Two layers Monitoring
+# 2. Two layers Monitoring
 
-### The Host Machine
+## 2.0 Monitoring on VM
+
+![VM Monitoring](/uploads/0001-vm-monitoring.png)
+
+- Application Layer: Supervise the error in application layer
+- Machine Layer: CPU, MEM etc.
+
+## 2.1 The Host Machine
 
 We want to catch the following information:
 
+- System Information : CPU, MEM, Disk IO, Network etc.
+- All Containers Names
+- Running Containers
+- Dead Containers
+- Docker Informations : Storage Driver、Data Space Used、Data Space Total、Metadata Space Total、Metadata Space Used、client version、client api version、server version、servier api version
+
+## 2.2 The Containers
+
+In the container, we want to catch :
+
+- Container's information : Name, IP, Image, Command etc.
+- The status : Running / Stopped
 - CPU
 - Memory Usage
 - Memory Limit
 - Network IO
+- Disk
+
+# 3. How to get Container Informations
+
+## 3.1 Basic
+
+- Namespace: Separation here
+- cgroup : ressources
 
 
-### The Docker Instances
-
-In the container, we want to catch :
-
-- Configuration
-- Logs
-- Machine and Daemon logs
-- Information of Container
-- Metric Performance
-- Event
-
-## Where are the container metrics?
 
 ### Cpu Memory FS
 
