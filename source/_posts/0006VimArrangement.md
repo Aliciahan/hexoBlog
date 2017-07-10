@@ -187,7 +187,7 @@ q       关闭 NerdTree 窗口
 > let NERDTreeShowBookmarks=1
 
 
-## 3.2 重头戏 自动补全
+## 3.2 重头戏 YCM自动补全
 
 YouCompleteMe是Google里面一个大神搞的. 超级麻烦的一个东西,  Git在 <a href="https://github.com/Valloric/YouCompleteMe">这里</a> 插件名称: 'Valloric/YouCompleteMe'
 
@@ -206,6 +206,29 @@ alias vim='/opt/local/bin/vim'
 - CMake 要安装, brew install cmake 搞定
 - python 需要有
 - clang貌似是肯定要.
+
+### 3.2.1 For Linux
+
+~~~bash
+# Install Vundle Then
+# Plgin 'Valloric/YouCompleteMe'
+# :PluginInstall
+
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev python3-dev
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+
+~~~
+
+### 3.2.2 For Mac OS
+
+~~~bash
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+~~~
+
+
 ## 3.3 Snippets 登场
 
 
