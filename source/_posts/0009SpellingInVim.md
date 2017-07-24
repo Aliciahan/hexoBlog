@@ -45,8 +45,8 @@ Adding this in to ~/.vimrc, And the hotkeys are :
 
 | Key | Function | 
 |:----------------|:----------------|
-| <F7> | Set Spelling Check on/off |
-| <F8> | Switch between En/FR |
+| F7 | Set Spelling Check on/off |
+| F8 | Switch between En/FR |
 | ]s | jump to next error |
 | [s | Jump back to previous error |
 | z= | Choose from the check list | 
